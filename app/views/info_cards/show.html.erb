@@ -2,9 +2,8 @@
 
 <%= render @info_card %>
 
-<div>
-  <%= link_to "Edit this info card", edit_info_card_path(@info_card) %> |
-  <%= link_to "Back to info cards", info_cards_path %>
-
-  <%= button_to "Destroy this info card", @info_card, method: :delete %>
+<div class="d-flex">
+  <%= button_to "Edit card", edit_info_card_path(@info_card), method: :get, class: 'btn btn-primary' %>&nbsp;
+  <%= button_to "Remove card", @info_card, method: :delete, class: 'btn btn-primary' %>&nbsp;
+  <%= button_to "Back to cards", info_cards_path, method: :get, class: 'btn btn-primary' %>
 </div>

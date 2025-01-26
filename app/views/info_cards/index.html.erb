@@ -2,15 +2,20 @@
 
 <% content_for :title, "Info cards" %>
 
-<h1>Info cards</h1>
+<h1>Info Cards</h1>
 
 <div id="info_cards">
+  <% if @info_cards.blank? %>
+    <p class='position-relative'>No cards to view</p>
+  <% end %>
+
   <% @info_cards.each do |info_card| %>
     <%= render info_card %>
-    <p>
-      <%= link_to "Show this info card", info_card %>
-    </p>
+    <%# <p> %>
+      <%#= button_to "View card", info_card, method: :get, class: "btn btn-primary" %>
+    <%# </p> %>
   <% end %>
 </div>
 
-<%= link_to "New info card", new_info_card_path %>
+<%= button_to "New card", new_info_card_path, method: :get, class: "btn btn-primary" %>
+

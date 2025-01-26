@@ -1,11 +1,11 @@
 <% content_for :title, "New info card" %>
 
-<h1>New info card</h1>
+<h1>New card</h1>
 
 <%= render "form", info_card: @info_card %>
 
 <br>
 
 <div>
-  <%= link_to "Back to info cards", info_cards_path %>
+  <%= button_to "Back to cards", info_cards_path, method: :get, class: 'btn btn-primary' %>
 </div>

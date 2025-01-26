@@ -1,11 +1,9 @@
 <div id="<%= dom_id info_card %>">
   <p>
-    <strong>Title:</strong>
-    <%= info_card.title %>
+    <%= link_to info_card.title, info_card %>
   </p>
 
   <p>
-    <strong>Description:</strong>
     <%= info_card.description %>
   </p>
 
