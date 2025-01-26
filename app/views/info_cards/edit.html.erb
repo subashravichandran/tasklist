@@ -1,0 +1,12 @@
+<% content_for :title, "Editing info card" %>
+
+<h1>Editing info card</h1>
+
+<%= render "form", info_card: @info_card %>
+
+<br>
+
+<div>
+  <%= link_to "Show this info card", @info_card %> |
+  <%= link_to "Back to info cards", info_cards_path %>
+</div>

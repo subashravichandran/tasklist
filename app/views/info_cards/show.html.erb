@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @info_card %>
+
+<div>
+  <%= link_to "Edit this info card", edit_info_card_path(@info_card) %> |
+  <%= link_to "Back to info cards", info_cards_path %>
+
+  <%= button_to "Destroy this info card", @info_card, method: :delete %>
+</div>
